@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=0.0.1
+Name=Timo's test Qt app
+GenericName=Test app
+Exec=timostestapp
+Terminal=false
+Categories=Game
+Comment=Just testing
+Keywords=
+Icon=${SNAP}/meta/gui/timostestapp.png

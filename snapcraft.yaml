@@ -1,0 +1,37 @@
+name: timostestapp2
+version: '0.0.1~test'
+summary: Upstream Qt to be compiled as part of your project
+description: |
+  Qt is a cross-platform C++ application framework. Qt's primary feature
+  is its rich set of widgets that provide standard GUI functionality.
+  This package includes several Qt Project's Qt modules as is from upstream.
+
+grade: stable
+confinement: strict
+
+parts:
+  qtapp2:
+    after: [qt57]
+    plugin: qmake
+    qt-version: qt5
+    source: .
+    stage-packages:
+            - libxkbcommon0
+            - ttf-ubuntu-font-family
+            - dmz-cursor-theme
+            - light-themes
+            - shared-mime-info
+            - libgdk-pixbuf2.0-0
+            - locales-all
+            - libglib2.0-bin
+
+  launcher:
+    plugin: dump
+    source: .
+    organize:
+      launcher: bin/qtapp2.run
+
+apps:
+  timostestapp2:
+    command: bin/qtapp2.run
+    plugs: ['home', 'unity7', 'opengl']

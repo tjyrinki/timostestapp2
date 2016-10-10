@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=qtapp2
+Exec=qmlscene %U qtapp2/Main.qml
+Icon=qtapp2/qtapp2.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+
